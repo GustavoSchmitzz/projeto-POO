@@ -6,6 +6,8 @@ public class Compra {
     private Integer id;
     private LocalDate data;
     private int quantidade;
+    private Integer idVendedor;
+    private Integer idCliente;
 
     public Integer getId() {
         return id;
