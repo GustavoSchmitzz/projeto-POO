@@ -4,6 +4,7 @@ public class Cliente {
     private Integer id;
     private String nome;
     private String estabelecimento;
+    private String telefone;
 
 
     public Integer getId() {
@@ -18,6 +19,13 @@ public class Cliente {
     }
     public void setNome(String nome) {
         this.nome = nome;
+    }
+
+    public String getTelefone() {
+        return telefone;
+    }
+    public void setTelefone(String telefone) {
+        this.telefone = telefone;
     }
 
     public String getEstabelecimento() {
