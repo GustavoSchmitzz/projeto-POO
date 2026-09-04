@@ -6,8 +6,8 @@ public class Compra {
     private Integer id;
     private LocalDate data;
     private int quantidade;
-    private Integer idVendedor;
-    private Integer idCliente;
+    private Cliente cliente;
+    private Vendedor vendedor;
 
     public Integer getId() {
         return id;
@@ -28,5 +28,19 @@ public class Compra {
     }
     public void setQuantidade(int quantidade) {
         this.quantidade = quantidade;
+    }
+
+    public Vendedor getVendedor() {
+        return vendedor;
+    }
+    public void setVendedor(Vendedor vendedor) {
+        this.vendedor = vendedor;
+    }
+
+    public Cliente getCliente() {
+        return cliente;
+    }
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
     }
 }
