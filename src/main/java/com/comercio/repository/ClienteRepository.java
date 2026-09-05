@@ -94,7 +94,11 @@ public class ClienteRepository {
             int resultado = comando.executeUpdate();
 
             return resultado > 0 ? cliente : null;
+
+        } catch (SQLException e) {
+            System.err.println(e.getMessage());
         }
+        return null;
     }
 
     public Cliente deletarCliente(Cliente cliente) throws SQLException {
@@ -112,7 +116,11 @@ public class ClienteRepository {
             int resultado = comando.executeUpdate();
 
             return resultado > 0 ? cliente : null;
+
+        } catch (SQLException e) {
+            System.err.println(e.getMessage());
         }
+        return null;
     }
     public boolean deletarClientePorId(Integer id) throws SQLException {
         String url = credenciais.getProperty("url");
@@ -129,7 +137,11 @@ public class ClienteRepository {
             int resultado = comando.executeUpdate();
 
             return resultado > 0;
+
+        } catch (SQLException e) {
+            System.err.println(e.getMessage());
         }
+        return false;
     }
 
     public List<Cliente> listarClientes(int limite, int offset) throws SQLException {
@@ -159,7 +171,11 @@ public class ClienteRepository {
                 }
 
                 return clientes;
+
+            } catch (SQLException e) {
+                System.err.println(e.getMessage());
             }
         }
+        return null;
     }
 }
